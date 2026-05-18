@@ -1,8 +1,43 @@
+[variables]
+NIXPACKS_PYTHON_VERSION = "3.11"
+
 [phases.setup]
-nixPkgs = ["python311", "chromium", "chromedriver"]
+nixPkgs = [
+  "python311",
+  "chromium",
+  "chromedriver",
+  "glib",
+  "nss",
+  "nspr",
+  "atk",
+  "at-spi2-atk",
+  "cups",
+  "dbus",
+  "libdrm",
+  "gtk3",
+  "expat",
+  "xcb-util",
+  "libxkbcommon",
+  "mesa",
+  "xorg.libX11",
+  "xorg.libXcomposite",
+  "xorg.libXdamage",
+  "xorg.libXext",
+  "xorg.libXfixes",
+  "xorg.libXrandr",
+  "xorg.libxcb",
+  "xorg.libXrender",
+  "xorg.libXtst",
+  "xorg.libXi",
+  "alsa-lib",
+  "pango",
+  "cairo"
+]
 
 [phases.install]
-cmds = ["pip install -r requirements.txt"]
+cmds = [
+  "pip install -r requirements.txt"
+]
 
 [start]
 cmd = "python bdo_kr_bot.py"
