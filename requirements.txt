@@ -1,7 +1,0 @@
-discord.py
-aiohttp
-beautifulsoup4
-selenium
-webdriver-manager
-pytz
-python-dotenv
